@@ -1,18 +1,18 @@
 Metadata-Version: 2.1
 Name: sentiment_prediction
 Version: 1.0.0
-Summary: An end-to-end machine learning project for Twitter sentiment classification
-Home-page: https://github.com/vijaytakbhate2002/Twitter-Post-Sentiment-Prediction--NLP-.git
+Summary: Sentiment classification of twitter post in four classes [negative, positive, nutral, irrelevant]
+Home-page: https://github.com/vijaytakbhate2002/sentiment_prediction_python_package.git
 Author: Vijay Dipak Takbhate
 Author-email: vijaytakbhate20@gmail.com
 License: MIT
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Programming Language :: Python
 Classifier: Programming Language :: Python :: 3
-Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.12
 Classifier: Programming Language :: Python :: Implementation :: CPython
 Classifier: Programming Language :: Python :: Implementation :: PyPy
-Requires-Python: >=3.7
+Requires-Python: >=3.12
 Description-Content-Type: text/markdown
 Requires-Dist: alembic==1.14.0
 Requires-Dist: blinker==1.9.0
@@ -110,20 +110,33 @@ This project focuses on predicting the sentiment of Twitter posts using Natural 
 
 ## Project Structure  
 ```plaintext  
-Twitter-Post-Sentiment-Prediction--NLP-  
-│  
-├── data_pipeline/          # ETL scripts for data extraction, transformation, and loading  
-├── data_processing/        # Custom data processing classes  
-├── model/                  # Model training and prediction scripts  
-│   ├── train_pipe.py       # Training pipeline  
-│   ├── predict.py          # Prediction pipeline  
-│  
-├── trained_models/         # Trained model and metadata (vectorizer, encoder)  
-├── logs/                   # Log files for tracking processes  
-├── config.py               # Configuration file with paths and constants  
-├── requirements.txt        # Python dependencies  
-├── README.md               # Project documentation  
-└── .gitignore              # Excluded files and folders  
+sentiment_prediction_python_package/
+│
+├── sentiment_prediction/                 # Main package directory
+│   ├── config/                           
+│   │   └── config.py                     # Configuration file
+│   │
+│   ├── data_manipulation/                # Model training and prediction scripts
+│   │   ├── data_handling.py              # Training pipeline
+│   │   ├── data_processing.py            # Prediction pipeline
+│   │   └── text_filer.py                 # Text filtering utilities
+│   │
+│   └── trained_models/                   # Trained models and metadata
+│       ├── classifier.pkl                # Classifier model
+│       ├── vectorizer.pkl                # Vectorizer model
+│       └── encoder.pkl                   # Encoder model
+│
+├── dist/                                 # Distribution packages (generated)
+│
+├── build/                                # Build files (generated)
+│
+├── sentiment_prediction.egg-info/        # Egg-info metadata (generated)
+│
+├── .gitignore                            # Excluded files and folders
+├── MANIFEST.in                           # Configuration file with paths and constants
+├── README.md                             # Project documentation
+├── requirements.txt                      # Project dependencies
+└── setup.py                              # Package metadata and configuration
 ```  
 
 ---
