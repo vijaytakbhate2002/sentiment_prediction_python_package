@@ -1,0 +1,1 @@
+recursive-include sentiment_prediction/trained_models *.pkl

@@ -1,0 +1,178 @@
+Metadata-Version: 2.1
+Name: sentiment_prediction
+Version: 1.0.0
+Summary: An end-to-end machine learning project for Twitter sentiment classification
+Home-page: https://github.com/vijaytakbhate2002/Twitter-Post-Sentiment-Prediction--NLP-.git
+Author: Vijay Dipak Takbhate
+Author-email: vijaytakbhate20@gmail.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: alembic==1.14.0
+Requires-Dist: blinker==1.9.0
+Requires-Dist: cachetools==5.5.0
+Requires-Dist: certifi==2024.8.30
+Requires-Dist: charset-normalizer==3.4.0
+Requires-Dist: click==8.1.7
+Requires-Dist: cloudpickle==3.1.0
+Requires-Dist: colorama==0.4.6
+Requires-Dist: contourpy==1.3.0
+Requires-Dist: cycler==0.12.1
+Requires-Dist: databricks-sdk==0.36.0
+Requires-Dist: Deprecated==1.2.14
+Requires-Dist: docker==7.1.0
+Requires-Dist: findspark==2.0.1
+Requires-Dist: Flask==3.0.3
+Requires-Dist: fonttools==4.54.1
+Requires-Dist: gitdb==4.0.11
+Requires-Dist: GitPython==3.1.43
+Requires-Dist: google-auth==2.36.0
+Requires-Dist: graphene==3.4.1
+Requires-Dist: graphql-core==3.2.5
+Requires-Dist: graphql-relay==3.2.0
+Requires-Dist: greenlet==3.1.1
+Requires-Dist: idna==3.10
+Requires-Dist: importlib_metadata==8.5.0
+Requires-Dist: itsdangerous==2.2.0
+Requires-Dist: Jinja2==3.1.4
+Requires-Dist: joblib==1.4.2
+Requires-Dist: kiwisolver==1.4.7
+Requires-Dist: Mako==1.3.6
+Requires-Dist: Markdown==3.7
+Requires-Dist: MarkupSafe==3.0.2
+Requires-Dist: matplotlib==3.9.2
+Requires-Dist: mlflow==2.17.2
+Requires-Dist: mlflow-skinny==2.17.2
+Requires-Dist: mysql-connector==2.2.9
+Requires-Dist: nltk==3.9.1
+Requires-Dist: numpy==2.1.3
+Requires-Dist: opentelemetry-api==1.28.1
+Requires-Dist: opentelemetry-sdk==1.28.1
+Requires-Dist: opentelemetry-semantic-conventions==0.49b1
+Requires-Dist: packaging==24.2
+Requires-Dist: pandas==2.2.3
+Requires-Dist: pillow==11.0.0
+Requires-Dist: protobuf==5.28.3
+Requires-Dist: py4j==0.10.9.7
+Requires-Dist: pyarrow==17.0.0
+Requires-Dist: pyasn1==0.6.1
+Requires-Dist: pyasn1_modules==0.4.1
+Requires-Dist: pyparsing==3.2.0
+Requires-Dist: pyspark==3.5.3
+Requires-Dist: python-dateutil==2.9.0.post0
+Requires-Dist: pytz==2024.2
+Requires-Dist: pywin32==308
+Requires-Dist: PyYAML==6.0.2
+Requires-Dist: regex==2024.11.6
+Requires-Dist: requests==2.32.3
+Requires-Dist: rsa==4.9
+Requires-Dist: scikit-learn==1.5.2
+Requires-Dist: scipy==1.14.1
+Requires-Dist: setuptools==75.5.0
+Requires-Dist: six==1.16.0
+Requires-Dist: smmap==5.0.1
+Requires-Dist: SQLAlchemy==2.0.36
+Requires-Dist: sqlparse==0.5.1
+Requires-Dist: threadpoolctl==3.5.0
+Requires-Dist: tqdm==4.67.0
+Requires-Dist: typing_extensions==4.12.2
+Requires-Dist: tzdata==2024.2
+Requires-Dist: urllib3==2.2.3
+Requires-Dist: waitress==3.0.1
+Requires-Dist: Werkzeug==3.1.3
+Requires-Dist: wrapt==1.16.0
+Requires-Dist: zipp==3.20.2
+
+### README.md  
+
+# Twitter Post Sentiment Prediction - NLP  
+
+This project focuses on predicting the sentiment of Twitter posts using Natural Language Processing (NLP) techniques. It is an end-to-end machine learning project that includes data preprocessing, model building, hyperparameter tuning, and deployment.
+
+---
+
+## Features  
+- **ETL Pipeline**: Extract, transform, and load (ETL) processes implemented using PySpark and SQL.  
+- **Text Processing**: Cleaned text data using regex, removed special characters, and vectorized text using TF-IDF.  
+- **Model Building**: Implemented Logistic Regression and Multinomial Naive Bayes for sentiment prediction.  
+- **Hyperparameter Tuning**: Optimized models using GridSearchCV.  
+- **Experiment Tracking**: Logged experiments with MLflow for efficient performance comparison.  
+- **Model Packaging**: Prepared reusable model packages using `sdist` and `wheel`.  
+- **Deployment Ready**: Plan to host the project on Render for public access.  
+
+---
+
+## Project Structure  
+```plaintext  
+Twitter-Post-Sentiment-Prediction--NLP-  
+│  
+├── data_pipeline/          # ETL scripts for data extraction, transformation, and loading  
+├── data_processing/        # Custom data processing classes  
+├── model/                  # Model training and prediction scripts  
+│   ├── train_pipe.py       # Training pipeline  
+│   ├── predict.py          # Prediction pipeline  
+│  
+├── trained_models/         # Trained model and metadata (vectorizer, encoder)  
+├── logs/                   # Log files for tracking processes  
+├── config.py               # Configuration file with paths and constants  
+├── requirements.txt        # Python dependencies  
+├── README.md               # Project documentation  
+└── .gitignore              # Excluded files and folders  
+```  
+
+---
+
+## Installation  
+1. Clone the repository:  
+   ```bash  
+   git clone https://github.com/vijaytakbhate2002/Twitter-Post-Sentiment-Prediction--NLP-.git  
+   ```  
+2. Navigate to the project directory:  
+   ```bash  
+   cd Twitter-Post-Sentiment-Prediction--NLP-  
+   ```  
+3. Install dependencies:  
+   ```bash  
+   pip install -r requirements.txt  
+   ```  
+
+---
+
+## Usage  
+
+### Train the Model  
+Run the training script to train the sentiment classification model:  
+```bash  
+python model/train_pipe.py  
+```  
+
+### Predict Sentiments  
+Use the prediction script to test the model on new data:  
+```bash  
+python model/predict.py  
+``` 
+
+---
+
+## Contribution  
+Feel free to submit issues or pull requests. Contributions are welcome!  
+
+---
+
+## License  
+This project is licensed under the MIT License.  
+
+---
+
+## Author  
+[Vijay Dipak Takbhate](https://github.com/vijaytakbhate2002)  
+
+---  
+
+GitHub Repository: [Twitter Post Sentiment Prediction](https://github.com/vijaytakbhate2002/Twitter-Post-Sentiment-Prediction--NLP-.git)
