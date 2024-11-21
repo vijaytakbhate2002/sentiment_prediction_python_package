@@ -14,13 +14,13 @@ pwd = os.path.abspath(os.path.dirname(__file__))
 
 def list_reqs(fname='requirements.txt'):
     try:
-        with io.open(os.path.join(pwd, fname), encoding='utf-16') as f:
+        with io.open(os.path.join(pwd, fname), encoding='utf-8') as f:
             return f.read().splitlines()
     except FileNotFoundError:
         pass
 
 try:
-    with io.open(os.path.join(pwd, 'README.md'), encoding='utf-16') as f:
+    with io.open(os.path.join(pwd, 'README.md'), encoding='utf-8') as f:
         long_description = f.read()
 except FileNotFoundError:
     long_description = DESCRIPTION
